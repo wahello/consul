@@ -13,6 +13,7 @@ export default Component.extend({
   settings: service('settings'),
   helper: service('code-mirror/linter'),
   classNames: ['code-editor'],
+  readonly: false,
   syntax: '',
   onchange: function(value) {
     get(this, 'settings').persist({
@@ -29,6 +30,7 @@ export default Component.extend({
     set(this, 'options', {
       ...DEFAULTS,
       mode: mode.mime,
+      readOnly: get(this, 'readonly'),
     });
     const editor = get(this, 'editor');
     editor.setOption('mode', mode.mime);

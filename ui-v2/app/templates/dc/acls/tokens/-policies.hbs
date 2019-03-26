@@ -55,7 +55,7 @@
         {{#block-slot 'details'}}
             <label class="type-text">
               <span>Rules <a href="{{env 'CONSUL_DOCUMENTATION_URL'}}/guides/acl.html#rule-specification" rel="help noopener noreferrer" target="_blank">(HCL Format)</a></span>
-              {{code-editor readonly=true value=item.Rules}}
+              {{code-editor readonly=true syntax="hcl" value=item.Rules}}
             </label>
             <div>
               {{#confirmation-dialog message='Are you sure you want to remove this policy from this token?'}}
