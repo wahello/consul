@@ -194,6 +194,7 @@ func (u *Upstream) ToAPI() api.Upstream {
 		LocalBindAddress:     u.LocalBindAddress,
 		LocalBindPort:        u.LocalBindPort,
 		Config:               u.Config,
+		MeshGateway:          u.MeshGateway.ToAPI(),
 	}
 }
 
